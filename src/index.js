@@ -1,19 +1,22 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 
 // import router
 import { BrowserRouter } from "react-router-dom";
 
 // activate redux, wrap provider around app
-// import { Provider } from "react-redux";
-// import store from "./store/index";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>
+    </React.StrictMode>
 );
+

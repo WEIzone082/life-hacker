@@ -1,9 +1,14 @@
 import React from "react";
 
-const EnterProject = ()=>{
+import { useParams } from "react-router-dom";
+
+const EnterProject = () => {
+    
+    const params = useParams()
+
     return(
         <div className="page page-new-project">
-            <h1 className="page-title">進入活動</h1>
+            <h1 className="page-title">{params.projectID}</h1>
             <section className="options">
                 <div className="option-btn lg">
                     新增支出

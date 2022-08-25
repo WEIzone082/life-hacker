@@ -10,7 +10,7 @@ const Index = () => {
             <h1 className="page-title">暴力收錢機</h1>
             <section className="options">
                 <div className="option-btn lg">
-                    <Link to={"/enter-project"}>進入活動</Link>
+                    <Link to={"/select-project"}>進入活動</Link>
                 </div>
                 <div className="option-btn lg">
                     <Link to={"/new-project"}>新增活動</Link>
